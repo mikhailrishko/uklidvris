@@ -385,25 +385,7 @@
             .btn {
                 padding: 10px 20px;
             }
-        }
-        @media (max-width: 768px) { 
-    .service-icon.hidden-icon {
-        display: none;
-    }
-}
-        /* Скрытие текста для мобильных устройств */
-@media (max-width: 768px) {
-    .service h3 {
-        display: none;
-            }
-}
-        /* Скрытие текста для мобильных устройств */
-@media (max-width: 768px) {
-     .service p  {
-        display: none;
-    }
-}
-
+      
     </style>
     
 </head>
@@ -462,7 +444,7 @@
                         </div>
                     </div>
             <div class="service" id="projektovani">
-                <img src="img/projektovani-icon.png" alt="Ikona Projektování" class="service-icon hidden-icon">
+                <img src="img/projektovani-icon.png" alt="Ikona Projektování" class="service-icon">
                 <h3>Úklid po stavebních pracích</h3>
                 <p>Po dokončení stavebních nebo renovačních prací je důležité zajistit, aby prostory byly opět čisté a připravené k použití. Náš tým se postará o dokonalý úklid po stavbě, odstraní prach, nečistoty a zbytky materiálů, takže vaše nově zrekonstruované prostory budou připravené k okamžitému využití.</p>
             </div>
@@ -537,71 +519,6 @@ function gtag_report_conversion(url) {
     };
 }
 </script>
-        
-    </script>
-function isMobile() {
-    return window.innerWidth <= 768; // Ширина экрана для телефонов
-}
-
-function showReconstructionMenu() {
-    const menu = document.getElementById('reconstruction-menu');
-    const icon = document.querySelector('.service-icon');
-    
-    menu.style.display = 'block'; // Показываем меню
-    
-    if (isMobile() && icon) {
-        icon.style.display = 'none'; // Скрываем иконку только на мобильных устройствах
-    }
-}
-
-function hideReconstructionMenu() {
-    const menu = document.getElementById('reconstruction-menu');
-    const icon = document.querySelector('.service-icon');
-    
-    menu.style.display = 'none'; // Прячем меню
-    
-    if (isMobile() && icon) {
-        icon.style.display = ''; // Показываем иконку обратно
-    }
-}
-
-// Добавляем скрытие текста при касании
-function hideTextOnTouch() {
-    const menuItems = document.querySelectorAll('.construction-menu-item');
-    
-    menuItems.forEach(item => {
-        item.addEventListener('touchstart', () => {
-            const text = item.querySelector('.service h3');
-            if (text) {
-                text.style.display = 'none'; // Скрываем текст
-            }
-
-            const pText = item.querySelector('.service p');
-            if (pText) {
-                pText.style.display = 'none'; // Скрываем текст
-            }
-        });
-        
-        item.addEventListener('touchend', () => {
-            const text = item.querySelector('.service h3');
-            if (text) {
-                text.style.display = ''; // Показываем текст обратно
-            }
-
-            const pText = item.querySelector('.service p');
-            if (pText) {
-                pText.style.display = ''; // Показываем текст обратно
-            }
-        });
-    });
-}
-
-// Вызываем функцию при загрузке страницы, чтобы добавить обработчики для мобильных устройств
-if (isMobile()) {
-    hideTextOnTouch();
-}
-</script>
-
     <script>
         
         function toggleMenu() {
