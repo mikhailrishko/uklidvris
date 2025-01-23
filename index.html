@@ -524,24 +524,31 @@ function gtag_report_conversion(url) {
 </script>
         
     <script>
-const menu = document.querySelector('.reconstruction-menu');
-const toggleButton = document.querySelector('.showReconstructionMenu()');
-const icon = document.querySelector('.service-icon');
-
-// Функция для проверки ширины экрана
 function isMobile() {
-    return window.innerWidth <= 768; // Ширина для телефонов
+    return window.innerWidth <= 768; // Ширина экрана для телефонов
 }
 
-toggleButton.addEventListener('click', () => {
-    menu.classList.toggle('show-reconstruction-menu');
-
-    if (menu.classList.contains('show-reconstruction-menu') && isMobile()) {
-        icon.classList.add('hidden-icon'); // Скрыть иконку на телефонах
-    } else {
-        icon.classList.remove('hidden-icon'); // Показать иконку
+function showReconstructionMenu() {
+    const menu = document.getElementById('reconstruction-menu');
+    const icon = document.querySelector('.service-icon');
+    
+    menu.style.display = 'block'; // Показываем меню
+    
+    if (isMobile()) {
+        icon.style.display = 'none'; // Скрываем иконку только на телефонах
     }
-});
+}
+
+function hideReconstructionMenu() {
+    const menu = document.getElementById('reconstruction-menu');
+    const icon = document.querySelector('.service-icon');
+    
+    menu.style.display = 'none'; // Прячем меню
+    
+    if (isMobile()) {
+        icon.style.display = ''; // Показываем иконку обратно
+    }
+}
          </script>
 
     <script>
