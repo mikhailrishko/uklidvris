@@ -543,8 +543,8 @@ function showReconstructionMenu() {
     
     menu.style.display = 'block'; // Показываем меню
     
-    if (isMobile()) {
-        icon.style.display = 'none'; // Скрываем иконку только на телефонах
+    if (isMobile() && icon) {
+        icon.style.display = 'none'; // Скрываем иконку только на мобильных устройствах
     }
 }
 
@@ -554,7 +554,7 @@ function hideReconstructionMenu() {
     
     menu.style.display = 'none'; // Прячем меню
     
-    if (isMobile()) {
+    if (isMobile() && icon) {
         icon.style.display = ''; // Показываем иконку обратно
     }
 }
@@ -565,14 +565,14 @@ function hideTextOnTouch() {
     
     menuItems.forEach(item => {
         item.addEventListener('touchstart', () => {
-            const text = item.querySelector(' .service h3 ');
+            const text = item.querySelector('.service h3 ');
             if (text) {
                 text.style.display = 'none'; // Скрываем текст
             }
         });
         
         item.addEventListener('touchend', () => {
-            const text = item.querySelector(' .service h3 ');
+            const text = item.querySelector('.service h3 ');
             if (text) {
                 text.style.display = ''; // Показываем текст обратно
             }
@@ -585,9 +585,7 @@ if (isMobile()) {
     hideTextOnTouch();
 }
 
-
-
-         </script>
+    </script>
 
     <script>
         
