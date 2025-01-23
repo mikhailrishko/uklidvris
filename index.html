@@ -393,7 +393,7 @@
 }
         /* Скрытие текста для мобильных устройств */
 @media (max-width: 768px) {
-    .service h3  {
+    .service h3  .service p  {
         display: none;
     }
 }
@@ -565,14 +565,14 @@ function hideTextOnTouch() {
     
     menuItems.forEach(item => {
         item.addEventListener('touchstart', () => {
-            const text = item.querySelector('.service h3 ');
+            const text = item.querySelector('.service h3  .service p ');
             if (text) {
                 text.style.display = 'none'; // Скрываем текст
             }
         });
         
         item.addEventListener('touchend', () => {
-            const text = item.querySelector('.service h3 ');
+            const text = item.querySelector('.service h3  .service p ');
             if (text) {
                 text.style.display = ''; // Показываем текст обратно
             }
