@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-KDS97QDZ');</script>
+   <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vris сz - profesionální stavební firma. Nabízíme kvalitní stavební služby po celé České republice.">
+    <meta name="keywords" content="vris.cz, vris,vriscz,vris cz,vris cz,stavební firma, stavba,stavební firma Praha,stavební služby, Vris s.r.o, Česká republika,rekonstrukce bytu,opravy">
+    <meta name="author" content="Vris s.r.o">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vris.cz">
+    <title>Vris s.r.o stavební firma</title>
+   <link rel="icon" href="https://vris.cz/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="https://vris.cz/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            padding: 0;
+            color: #444;
+            background: linear-gradient(to bottom, #e9edf3, #ffffff);
+        }
+
+        header {
+            background: url('img/logo.jpg') no-repeat center center;
+            background-size: cover;
+            height: 120vh;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-left {
+            position: absolute;
+            height: 200px;
+            left: 50px;
+            top: 30px;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+            color: #333;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-left:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 35px;
+
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 3px;
+            background-color: hsl(44, 94%, 49%);
+            border-radius: 5px;
+            color: #333
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(106, 104, 104, 0.9);
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 200px;
+            padding-top: 50px;
+            z-index: 999;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .show-menu {
+            display: flex;
+        }
+
+        section {
+            padding: 50px 10%;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .btn {
+            background-color: #070707;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background-color: #060606;
+        }
+
+        #hero {
+            background: url('img/hero-bg.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            color: #f0f0f0;
+        }
+
+        .hero-content a {
+            background-color: hsl(37, 90%, 51%);
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .hero-content a:hover {
+            background-color: hsl(35, 93%, 39%);
+        }
+
+        .about-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .about-images img {
+            width: 48%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .hero-content h2, .hero-content p, .btn {
+            color: #000000;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service {         
+            flex: 1 1 auto;
+            text-align: center;
+            min-width: 200px;
+            position: relative;
+           
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .service p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .service:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .reconstruction-menu {
+            display: none;
+            background-color: rgba(59, 58, 58, 0.8);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .reconstruction-menu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        .reconstruction-menu a:hover {
+            background-color: #333;
+        }
+
+        .show-reconstruction-menu {
+            display: block;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 30%;
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        .contact-form button {
+            background-color: #db9017e0;
+            color: rgba(241, 179, 6, 0.927);
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                height: 80vh;
+            }
+
+            .logo-left {
+                height: 50px;
+                left: 20px;
+                top: 20px;
+            }
+
+            .hamburger {
+                top: 15px;
+                right: 15px;
+            }
+
+            .menu {
+                width: 100%;
+                padding-top: 30px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .about-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-images img {
+                width: auto;
+                margin-bottom: 20px;
+            }
+
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form button {
+                width: 100%;
+            }
+        
+        }
+       
+     
+            .contact-form button {
+                width: auto;
+                margin-top: 10px;
+            }
+    
+        
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="img/logo2.png" alt="Logo VRIS" class="logo-left">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="menu" id="menu">
+            <a href="#about">O nás</a>
+            <a href="#services">Služby</a>
+            <a href="#contact">Kontakty</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Váš spolehlivý partner v úklidu</h2>
+            <p>Důvěra. Čistota. Profesionalita</p>
+            <a href="#contact" class="btn">Kontaktujte nás</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>O nás</h2>
+        <p>Jsme rodinná firma založená v roce 2008. Od té doby se specializujeme na poskytování kvalitních a komplexních úklidových služeb, které splňují nejvyšší standardy a přání našich klientů. Naším cílem je nejen splnit, ale i překonat očekávání každého, kdo se rozhodne s námi spolupracovat.</p>
+        <p>Věříme, že každý klient a prostor je jedinečný a zaslouží si individuální přístup. Snažíme se porozumět potřebám našich zákazníků a přinášet efektivní a flexibilní řešení. Naše služby zahrnují širokou škálu činností – od pravidelného úklidu domácností a kanceláří až po speciální čištění, například mytí oken, čištění koberců nebo dezinfekci prostor.</p>
+        <p>V průběhu let jsme získali mnoho zkušeností a dovedností, které nám umožňují zajišťovat úklid na nejvyšší úrovni. Naše firma se může pochlubit týmem pečlivých a spolehlivých profesionálů, kteří mají hluboké znalosti a smysl pro detail. Každý člen našeho týmu se soustředí na preciznost, efektivitu a spokojenost klienta, což je naším hlavním cílem.</p>
+        <p>Věříme, že úspěch naší firmy spočívá nejen v kvalitně odvedené práci, ale také v budování dlouhodobých vztahů s našimi zákazníky. Snažíme se o otevřenou komunikaci a transparentnost ve všech fázích spolupráce. Díky tomu si získáváme důvěru našich klientů a pomáháme vytvářet čisté, zdravé a příjemné prostředí. Naše práce je naším závazkem a každá dokončená zakázka je pro nás důkazem naší profesionality a oddanosti tomu, co děláme.</p>
+        <div class="about-images">
+            <img src="img/team.jpg" alt="Stavba">
+            <img src="img/team2.jpg" alt="Tým">
+        </div>
+    </section>
+
+    <section id="services" class="container">
+        <h2>Naše služby</h2>
+        <section id="services">
+            <div class="container">
+                <div class="services-list">
+                    <div class="service" id="rekonstrukce" onmouseover="showReconstructionMenu()" onmouseout="hideReconstructionMenu()">
+                        <img src="img/rekonstrukce-icon.png" alt="Ikona Rekonstrukce" class="service-icon">
+                        <h3>Úklid domácnosti</h3>
+                        <p>Proměníme váš domov v místo, kde se budete cítit opravdu dobře. Postaráme se o každý detail, aby byl váš prostor čistý, svěží a útulný.</p>
+                        <div class="reconstruction-menu" id="reconstruction-menu">
+                            <a href="#">Úklid kuchyní</a>
+                            <a href="#">Úklid koupelen</a>
+                            <a href="#">Úklid ložnic</a>
+                            <a href="#">Úklid obývacích pokojů</a>
+                            <a href="#">Mytí oken</a>
+                            <a href="#">Čistění koberců a čalouněného nábytku parním vysavačem</a>
+                            <a href="#">A mnoho dalších...</a>
+                        </div>
+                    </div>
+            <div class="service" id="projektovani">
+                <img src="img/projektovani-icon.png" alt="Ikona Projektování" class="service-icon">
+                <h3>Úklid po stavebních pracích</h3>
+                <p>Po dokončení stavebních nebo renovačních prací je důležité zajistit, aby prostory byly opět čisté a připravené k použití. Náš tým se postará o dokonalý úklid po stavbě, odstraní prach, nečistoty a zbytky materiálů, takže vaše nově zrekonstruované prostory budou připravené k okamžitému využití.</p>
+            </div>
+            <div class="service" id="stavba">
+                <img src="img/stavba-icon.png" alt="Ikona Stavba" class="service-icon">
+                <h3>Úklid komerčních prostor</h3>
+                <p>Pečujeme o čistotu vašich pracovních prostor. Naši odborníci zajistí, že vaše kanceláře, obchody nebo jiné komerční prostory budou vždy zářit. Používáme efektivní a ekologické prostředky, které šetří čas i prostředí.
+                </div>
+            <div class="service" id="events">
+                <img src="img/event1.png" alt="Ikona events" class="service-icon">
+                <h3>Úklid po akcích a eventech</h3>
+                <p>Po pořádání firemních akcí, konferencí nebo jiných událostí zůstává spousta nepořádku. Naše firma se postará o rychlý a efektivní úklid po takových událostech, abyste se mohli soustředit na další kroky. Zajistíme odstranění odpadků, úklid podlah, stolů a dalších prostor, takže místo bude opět v perfektním stavu.</p>
+            </div>
+        </div>
+    </section>
+<style>
+  textarea {
+    width: 100%; /* Ширина текстового поля занимает всю доступную ширину */
+    height: 200px; /* Высота текстового поля */
+    resize: both; /* Пользователь может изменять размер вручную */
+    padding: 10px; /* Внутренний отступ */
+    font-size: 16px; /* Размер шрифта */
+    border: 1px solid #ccc; /* Рамка текстового поля */
+    border-radius: 5px; /* Скруглённые углы */
+  }   
+</style>  
+    <section id="contact" class="container">
+        <h2>Kontaktujte nás</h2>
+        <p>Pro více informací nebo dotazy nás neváhejte kontaktovat. Jsme zde pro vás!</p>
+        <p><strong>Telefon:</strong> <a href="tel:+420773228592">+420 773 228 592</a></p>
+ <form action="https://formsubmit.co/vris@post.cz" method="POST" onsubmit="trackFormSubmission()">
+ <input type="text" name="name" placeholder="Vaše jméno" required>
+ <input type="email" name="email" placeholder="Váš email" required>
+ <textarea name="message" placeholder="Vaše zpráva" required></textarea>
+ <button type="submit">Odeslat</button>
+</form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 VRIS s.r.o. Všechna práva vyhrazena.</p>
+    </footer>
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDS97QDZ');
+</script>
+
+<!-- End Google Tag Manager -->
+    
+  <!--Google Tag Manager (noscript)-->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDS97QDZ"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+
+   
+
+   
+   <script>
+  // Функция для Google Tag Manager
+function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    };
+}
+</script>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show-menu');
+        }
+
+        function showReconstructionMenu() {
+            document.getElementById('reconstruction-menu').classList.add('show-reconstruction-menu');
+        }
+
+        function hideReconstructionMenu() {
+            document.getElementById('reconstruction-menu').classList.remove('show-reconstruction-menu');
+        }
+    </script>
+</body>
+</html>
