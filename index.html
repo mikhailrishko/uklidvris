@@ -538,7 +538,7 @@ function gtag_report_conversion(url) {
 }
 </script>
         
-    <script>
+    </script>
 function isMobile() {
     return window.innerWidth <= 768; // Ширина экрана для телефонов
 }
@@ -575,33 +575,22 @@ function hideTextOnTouch() {
             if (text) {
                 text.style.display = 'none'; // Скрываем текст
             }
+
+            const pText = item.querySelector('.service p');
+            if (pText) {
+                pText.style.display = 'none'; // Скрываем текст
+            }
         });
         
         item.addEventListener('touchend', () => {
             const text = item.querySelector('.service h3');
             if (text) {
                 text.style.display = ''; // Показываем текст обратно
-                }
+            }
 
-// Добавляем скрытие текста при касании
-function hideTextOnTouch() {
-    const menuItems = document.querySelectorAll('.construction-menu-item');
-    
-    menuItems.forEach(item => {
-        item.addEventListener('touchstart', () => {
-            const text = item.querySelector('.service p');
-            if (text) {
-                text.style.display = 'none'; // Скрываем текст
-            }
-            }
-            
-        });
-        
-        item.addEventListener('touchend', () => {
-            const text = item.querySelector('.service p');
-            if (text) {
-                text.style.display = ''; // Показываем текст обратно
-            }
+            const pText = item.querySelector('.service p');
+            if (pText) {
+                pText.style.display = ''; // Показываем текст обратно
             }
         });
     });
@@ -611,8 +600,7 @@ function hideTextOnTouch() {
 if (isMobile()) {
     hideTextOnTouch();
 }
-
-    </script>
+</script>
 
     <script>
         
