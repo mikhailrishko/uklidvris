@@ -384,6 +384,11 @@
                 padding: 10px 20px;
             }
         }
+        @media (max-width: 768px) { 
+    .stavba-icon.hidden-icon {
+        display: none;
+    }
+}
     </style>
     
 </head>
@@ -517,8 +522,30 @@ function gtag_report_conversion(url) {
     };
 }
 </script>
-    
+        
     <script>
+const menu = document.querySelector('.reconstruction-menu');
+const toggleButton = document.querySelector('.toggle-menu-button');
+const icon = document.querySelector('.stavba-icon');
+
+// Функция для проверки ширины экрана
+function isMobile() {
+    return window.innerWidth <= 768; // Ширина для телефонов
+}
+
+toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('show-reconstruction-menu');
+
+    if (menu.classList.contains('show-reconstruction-menu') && isMobile()) {
+        icon.classList.add('hidden-icon'); // Скрыть иконку на телефонах
+    } else {
+        icon.classList.remove('hidden-icon'); // Показать иконку
+    }
+});
+         </script>
+
+    <script>
+        
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show-menu');
         }
