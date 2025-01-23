@@ -389,6 +389,15 @@
         display: none;
     }
 }
+        /* Скрытие текста для мобильных устройств */
+@media (max-width: 768px) {
+    .construction-menu-item:hover .menu-text {
+        visibility: hidden; /* Скрыть текст */
+        opacity: 0; /* Полностью скрыть */
+        transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавный переход */
+    }
+}
+
     </style>
     
 </head>
