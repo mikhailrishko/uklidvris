@@ -558,6 +558,35 @@ function hideReconstructionMenu() {
         icon.style.display = ''; // Показываем иконку обратно
     }
 }
+
+// Добавляем скрытие текста при касании
+function hideTextOnTouch() {
+    const menuItems = document.querySelectorAll('.construction-menu-item');
+    
+    menuItems.forEach(item => {
+        item.addEventListener('touchstart', () => {
+            const text = item.querySelector('.menu-text');
+            if (text) {
+                text.style.display = 'none'; // Скрываем текст
+            }
+        });
+        
+        item.addEventListener('touchend', () => {
+            const text = item.querySelector('.menu-text');
+            if (text) {
+                text.style.display = ''; // Показываем текст обратно
+            }
+        });
+    });
+}
+
+// Вызываем функцию при загрузке страницы, чтобы добавить обработчики для мобильных устройств
+if (isMobile()) {
+    hideTextOnTouch();
+}
+
+
+
          </script>
 
     <script>
