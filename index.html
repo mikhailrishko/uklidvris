@@ -256,8 +256,18 @@
         }
 
         .show-reconstruction-menu {
-            display: block;
             
+    display: block;#close-reconstruction-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
         }
 
         .contact-form {
@@ -385,7 +395,11 @@
             .btn {
                 padding: 10px 20px;
             }
-      
+      @media (max-width: 768px) {
+    #close-reconstruction-menu {
+        display: block; /* Показываем крестик только на мобильных */
+    }
+}
     </style>
     
 </head>
@@ -430,6 +444,8 @@
             <div class="container">
                 <div class="services-list">
                     <div class="service" id="rekonstrukce" onmouseover="showReconstructionMenu()" onmouseout="hideReconstructionMenu()">
+                        <div id="reconstruction-menu" style="display: none;">
+                        <button id="close-reconstruction-menu" class="close-btn">&#10005;</button>
                         <img src="img/rekonstrukce-icon.png" alt="Ikona Rekonstrukce" class="service-icon">
                         <h3>Úklid domácnosti</h3>
                         <p>Proměníme váš domov v místo, kde se budete cítit opravdu dobře. Postaráme se o každý detail, aby byl váš prostor čistý, svěží a útulný.</p>
@@ -517,9 +533,84 @@ function gtag_report_conversion(url) {
             window.location = url;
         }
     };
+} 
+      
+function isMobile() {
+    return window.innerWidth <= 768; // Ширина экрана для телефонов
+}
+
+function showReconstructionMenu() {
+    const menu = document.getElementById('reconstruction-menu');
+    const icon = document.querySelector('.service-icon');
+    const closeButton = document.getElementById('close-reconstruction-menu');
+    
+    menu.style.display = 'block'; // Показываем меню
+    
+    if (isMobile() && icon) {
+        icon.style.display = 'none'; // Скрываем иконку только на мобильных устройствах
+    }
+
+    // Показываем кнопку закрытия на мобильных
+    if (isMobile()) {
+        closeButton.style.display = 'block';
+    }
+}
+
+function hideReconstructionMenu() {
+    const menu = document.getElementById('reconstruction-menu');
+    const icon = document.querySelector('.service-icon');
+    const closeButton = document.getElementById('close-reconstruction-menu');
+    
+    menu.style.display = 'none'; // Прячем меню
+    
+    if (isMobile() && icon) {
+        icon.style.display = ''; // Показываем иконку обратно
+    }
+
+    // Скрываем кнопку закрытия
+    closeButton.style.display = 'none';
+}
+
+// Добавляем скрытие текста при касании
+function hideTextOnTouch() {
+    const menuItems = document.querySelectorAll('.construction-menu-item');
+    
+    menuItems.forEach(item => {
+        item.addEventListener('touchstart', () => {
+            const text = item.querySelector('.service h3');
+            if (text) {
+                text.style.display = 'none'; // Скрываем текст
+            }
+
+            const pText = item.querySelector('.service p');
+            if (pText) {
+                pText.style.display = 'none'; // Скрываем текст
+            }
+        });
+        
+        item.addEventListener('touchend', () => {
+            const text = item.querySelector('.service h3');
+            if (text) {
+                text.style.display = ''; // Показываем текст обратно
+            }
+
+            const pText = item.querySelector('.service p');
+            if (pText) {
+                pText.style.display = ''; // Показываем текст обратно
+            }
+        });
+    });
+}
+
+// Добавляем обработчик для крестика
+document.getElementById('close-reconstruction-menu')?.addEventListener('click', hideReconstructionMenu);
+
+// Вызываем функцию при загрузке страницы, чтобы добавить обработчики для мобильных устройств
+if (isMobile()) {
+    hideTextOnTouch();
 }
 </script>
-    <script>
+                    <script>
         
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show-menu');
