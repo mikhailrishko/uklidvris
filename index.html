@@ -381,62 +381,6 @@
         padding: 10px 20px;
     }
 }
-Ключевые изменения:
-.reconstruction-menu:
-Добавил position: absolute и z-index: 100 для того, чтобы меню отображалось поверх других элементов.
-Установил display: none по умолчанию и display: block при наведении на родительский элемент .service с помощью :hover.
-.service:hover .reconstruction-menu:
-При наведении на элемент с классом .service меню будет отображаться.
-Теперь меню будет отображаться поверх иконки только на мобильных устройствах с шириной экрана до 768px.
-            
-            .services-list {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-
-            .about-images {
-                flex-direction:column;
-                align-items: center;
-            }
-
-            .about-images img {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .contact-form input,
-            .contact-form textarea,
-            .contact-form button {
-                width: 100%;
-            }
-        
-        }
-       
-     
-            .contact-form button {
-                width: auto;
-                margin-top: 10px;
-            }
-    
-        
-
-        @media (max-width: 480px) {
-            .hero-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .hero-content p {
-                font-size: 0.9rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-            }
-        }
-   
- 
-
     </style>
     
 </head>
