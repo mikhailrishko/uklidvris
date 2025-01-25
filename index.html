@@ -329,27 +329,32 @@
             section {
                 padding: 50px 5%;
             }
+            .services-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+            .service {
+        position: relative;
+        cursor: pointer; 
+    }
      
          .reconstruction-menu {
-            position: absolute;
-            z-index: 100;
-            display: none;
-            background-color: #3b3a3a;
-            border: 1px solid #3b3a3a;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%; /* Размещение на всю ширину */
-            padding: 10px;
-            z-index: 9999 !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #3b3a3a;
+        z-index: 100;
+        display: none; /* Скрыто по умолчанию */
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           
     }
 
     .service:hover .reconstruction-menu {
         display: block;
-    }
-
-    .services-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
     }
 
     .about-images {
